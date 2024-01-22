@@ -1,0 +1,257 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+
+nav{
+    height: 70px;
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+nav h1{
+    font-weight: 700;
+    font-family:'Courier New', Courier, monospace;
+    color: white;
+}
+main{
+    display: flex;
+    gap: 10px;
+}
+
+.leftSideContainer{
+    width: 20%;
+    margin: 10px 10px;
+}
+
+
+.container{
+padding: 30px 20px;
+margin: 10px 20px;
+border-radius: 10px;
+box-shadow: 0 20px 40px rgba(grey);
+display: flex;
+flex-direction: column;
+background-color: #e3ddfd;
+}
+
+.header h1{
+    font-family: cursive;
+}
+
+.wordBox{
+    display: flex;
+    flex-direction: column;
+}
+
+.wordBox h3{
+    font-size: 30px;
+    color: #1f194c;
+
+}
+
+.word{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.wordBox button{
+    background-color: transparent;
+    color: #ae9cff;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    
+}
+
+.details{
+    display: flex;
+    color: #b3b6d4;
+}
+
+
+.wordMeaning{
+    color: #575a7b;
+    font-weight: 100;
+}
+
+.wordExample{
+    color: #575a7b;
+    font-style: italic;
+    border-left: 5px solid #ae9cff;
+    padding-left: 20px;
+}
+
+#refreshbtn{
+    margin-top: 5px;
+    background-color: #ae9cff;
+    color: white;
+
+}
+
+#refreshbtn:hover{
+    color: white;
+    background-color:#471dfe;
+   
+}
+
+
+
+.rightSideContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    min-height: 100vh;
+}
+
+.rightContainer{
+    position: relative;
+    padding: 0 20px;
+    display: flex;
+    gap: 30px;    
+}
+
+.rightContainer.card{
+    flex: 1;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: white;
+}
+
+.card .from,
+.card .to{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.card .heading{
+font-size: 0.8rem;
+font-weight: 600;
+color: blue;
+white-space: nowrap;
+}
+.dropdownContainer{
+    position: relative;
+    margin-bottom: 10px;
+    width: 100%;
+    border-radius: 20px;
+}
+.dropdownContainer .dropdownToggle{
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    border-radius:30px;
+    cursor: pointer;
+    transition: all 0.3s;
+
+}
+.dropdownContainer .dropdownToggle span{
+    flex: 1;
+    margin-left: 10px;
+}
+.dropdownContainer .dropdownToggle svg{
+    font-size: 20px;
+    transition: transform 0.3 ease;
+}
+.dropdownContainer.active .dropdownToggle{
+    border-radius: 20px 20px 0 0;
+}
+.dropdownContainer .dropdownMenu{
+    position: absolute;
+    /* top: 100%; */
+    left: 0;
+    width: 100%;
+    height: 300px;
+    overflow: auto;
+    display: none;
+    padding: 20px;
+    z-index: 1;
+    list-style: none;
+    flex-direction: column;
+    background-color: #ffeefc;
+    transition: all 0.3s;
+    border-radius: 0 0 20px 20px;
+}
+.dropdownContainer .dropdownMenu::-webkit-scrollbar{
+    display: none;
+}
+.dropdownContainer.active .dropdownMenu{
+    display: flex;
+}
+.dropdownContainer.active .dropdownMenu li{
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    border-bottom: 1px solid white;
+    transition: all 0.3s;
+}
+.dropdownContainer.active .dropdownMenu li.active{
+color: black;
+background-color: wheat;
+}
+.dropdownContainer.active .dropdownMenu li:not(.active):hover{
+    background-color: rgb(94, 2, 118);
+    color: white;
+}
+.rightContainer .textArea{
+    position: relative;
+}
+
+.rightContainer textarea{
+    width: 100%;
+   padding: 20px;
+   margin: 10px 0;
+   background-color: transparent;
+   resize: none;
+   outline: none;
+   border: none;
+   font-size: 18px;
+}
+
+.rightContainer .center{
+    position: relative;
+}
+
+.position{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: #1f194c;
+    width: 50px;
+    position: absolute;
+    height: 50px;
+    top: 30px;
+    left: -25px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 255, 0.223);
+}
+
+.position:hover{
+    transform: scale(1.1);
+}
